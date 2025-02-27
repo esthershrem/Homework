@@ -1,4 +1,12 @@
+/**
+ * The main class of the Jurassic Park simulation.
+ */
 public class JurassicPark {
+    /**
+     * The main method of the Jurassic Park simulation.
+     *
+     * @param args the command line arguments
+     */
     public static void main(String[] args) {
         Dinosaur dino1 = new Dinosaur("T-Rex", 20.0, 30.0, 12000.0);
         Dinosaur dino2 = new Dinosaur();
