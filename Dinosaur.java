@@ -6,7 +6,7 @@ public class Dinosaur {
     protected static int totalEnclosures = 0;
 
     public Dinosaur(String name, double height, double width, double weight) {
-        this.name = (name == null) ? name.trim().isEmpty() : "Barney";
+        this.name = (name == null || name.trim().isEmpty()) ? "Barney" : name;
         this.height = height;
         this.width = width;
         this.weight = weight;
