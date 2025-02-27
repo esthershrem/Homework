@@ -4,7 +4,7 @@ public class Velociraptor extends Dinosaur {
 
     public Velociraptor(String name, double height, double width, double weight, int speed, Pack pack) {
         super(name, height, width, weight);
-        this.speed = (seed < 0) ? 30 : speed;
+        this.speed = (speed < 0) ? 30 : speed;
         this.pack = pack;
     }
 
@@ -13,7 +13,7 @@ public class Velociraptor extends Dinosaur {
     }
 
     public Velociraptor(Velociraptor other) {
-        this(other.name, other.getHeight(), other.getWidth, other.getWeight(), other.speed, other.pack);
+        this(other.name, other.getHeight(), other.getWidth(), other.getWeight(), other.speed, other.pack);
     }
 
     @Override
@@ -21,7 +21,7 @@ public class Velociraptor extends Dinosaur {
         if (pack == null) {
             return 4 * getWidth() * getHeight();
         } else {
-            return size * getWidth() * getHeight();
+            return getSize() * getWidth() * getHeight();
         }
     }
 
@@ -33,11 +33,11 @@ public class Velociraptor extends Dinosaur {
     @Override
     public String toString() {
         if (pack == null) {
-            return String.format("%s requires a %.2f square foot enclosure and %.2f pounds of food.", name, encolosureSize(), calculateFood());
+            return String.format("%s requires a %.2f square foot enclosure and %.2f pounds of food.", name, enclosureSize(), calculateFood());
         } else {
             return String.format("%s is a family of dinosaurs of size %d! "
             + "%s requires a %.2f square foot enclosure and %.2f pounds of food.",
-            packName, size, name, enclosureSize(), calculateFood());
+            getPackName(), getSize(), name, enclosureSize(), calculateFood());
         }
     }
 
