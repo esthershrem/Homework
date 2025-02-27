@@ -1,7 +1,7 @@
 public class Pterodactyl extends Dinosaur {
     private double flightCeiling;
 
-    public Pterodactyl(Sring name, double height, double width, double weight, double flightCeiling) {
+    public Pterodactyl(String name, double weight, double height, double width, double flightSpeed) {
         super(name, height, width, weight);
         this.flightCeiling = (flightCeiling < 10 || flightCeiling > 100) ? 50 : flightCeiling;
     }
