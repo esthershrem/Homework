@@ -15,7 +15,7 @@ public class Pterodactyl extends Dinosaur {
     }
 
     public Pterodactyl(Pterodactyl other) {
-        this(other.name, other.getHeight(), other.getWidth, other.getWeight(), other.flightCeiling);
+        this(other.name, other.getHeight(), other.getWidth(), other.getWeight(), other.flightCeiling);
     }
 
     @Override
